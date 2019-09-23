@@ -2,7 +2,7 @@
 Class CSGO {
     public static function getVesion() : string
     {
-        return preg_match('#\<p.+class="post_date"\>((.+?){10})#', file_get_contents('https://blog.counter-strike.net/'), $preg_matches) ? $preg_matches[1] : false;
+        return preg_match('#\<p.+class="post_date"\>((.+?){10})#', file_get_contents('https://blog.counter-strike.net/'), $preg_matches) ? $preg_matches[1] : null;
     }
     public static function getUniquePlayers() : int
     {
